@@ -1,7 +1,7 @@
 def all_squared_pairs(num) 
  bound = 2147483647
  answer = []
- (0..num).each do |n|
+ (0..Math.sqrt(num).to_i).each do |n|
    first_squared = n * n
    if first_squared <= num
      second = Math.sqrt(num - first_squared)
