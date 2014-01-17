@@ -14,3 +14,13 @@ def all_squared_pairs(num)
   end
   answer
  end
+
+
+ # Best in class answer from Codewars
+
+
+ def all_squared_pairs(num)
+  0.upto(num).take_while { |n| n * n <= num / 2 }.
+    map { |n| [n, Math.sqrt(num - n * n)] }.
+    select { |n, m| m == m.to_i }
+end
